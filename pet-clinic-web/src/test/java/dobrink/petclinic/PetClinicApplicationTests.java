@@ -1,4 +1,4 @@
-package petclinic;
+package dobrink.petclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

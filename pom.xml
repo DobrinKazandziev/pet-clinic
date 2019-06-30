@@ -24,7 +24,7 @@
 
     <properties>
         <java.version>12</java.version>
-        <start-class>dobrinlpetclinic.PetClinicApplication</start-class>
+        <start-class>dobrink.petclinic.PetClinicApplication</start-class>
     </properties>
 
     <build>
