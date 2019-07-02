@@ -2,9 +2,11 @@ package dobrink.petclinic.services.map;
 
 import dobrink.petclinic.model.Vet;
 import dobrink.petclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
   @Override
   public Set<Vet> findAll() {

@@ -5,8 +5,6 @@ import dobrink.petclinic.model.Owner;
 import dobrink.petclinic.model.Vet;
 import dobrink.petclinic.services.OwnerService;
 import dobrink.petclinic.services.VetService;
-import dobrink.petclinic.services.map.OwnerServiceMap;
-import dobrink.petclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +15,12 @@ public class DataLoader implements CommandLineRunner {
 
   private final OwnerService ownerService;
   private final VetService vetService;
+  private final Faker faker;
 
-  Faker faker = new Faker();
-
-  public DataLoader() {
-    ownerService = new OwnerServiceMap();
-    vetService = new VetServiceMap();
+  public DataLoader(OwnerService ownerService, VetService vetService) {
+    this.ownerService = ownerService;
+    this.vetService = vetService;
+    this.faker = new Faker();
   }
 
   @Override
